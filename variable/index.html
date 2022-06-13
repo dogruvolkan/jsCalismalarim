@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var okulNumarasi = 12;
+        console.log(okulNumarasi);
+        var sube;
+        console.log(sube);
+        var SUBE = 14;
+        console.log(SUBE);
+
+        var degisken = "globalde var ile tanımlanan değişken";
+        if (true) {
+            degisken = "var ile tanımlanan değişkenlere blocklardan erişlebilir";
+        }
+        console.log(degisken);
+
+        var weLove = "Kodluyoruz";
+        if (2 > 1) {
+            var weLove = "bootcamp";
+            console.log(weLove);
+        }
+        console.log(weLove);
+
+        let okulNumara = 414;
+        if (true) {
+            let okulNumara = 245;
+            console.log("Ilk blockta ki deger: " + okulNumara);
+            if (true) {
+                let okulNumara = 312;
+                console.log("Ikinci blockta ki deger: " + okulNumara);
+            }
+        }
+        console.log("Global scopeta ki deger: " + okulNumara);
+
+
+        var serverName = "kodluyoruz.org";
+        console.log(serverName);
+
+        let dbName;
+        console.log(dbName);
+        dbName = "veritabani";
+        console.log(dbName);
+
+        //var yerine let kullanılması tavsiye edilir
+        // sabit tanımlarken const kullan
+        
+
+    </script>
+</body>
+
+</html>
