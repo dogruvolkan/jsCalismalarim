@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //boolean
+        let isActive = true;
+        let isDeath = false;
+
+        console.log(isActive);
+        console.log(isDeath);
+        console.log(typeof isActive);
+
+        console.log(Boolean(0));
+        console.log(Boolean(NaN));
+        console.log("boş",Boolean(""));
+
+        var x = 10/'a';
+        console.log(x);44
+
+        //tür dönüşümleri
+
+        console.log(Number.isInteger(10));
+        console.log(Number.isFinite(10));
+        console.log("sonuc", Number.isNaN("kedi"));
+
+        //ilk değişken (ifadenin) türü ne ise ona göre işlem yapar
+        console.log(true + false);
+        console.log(12/"6");
+        console.log("number"+7+8);
+
+        let number4 = "12px";
+        console.log(parseFloat(number4));
+    </script>
+</body>
+
+</html>
