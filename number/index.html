@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let price = 100;
+        let tax = 0.18;
+        let priceTax = price * tax;
+        let total = price + priceTax;
+
+        console.log(
+            "Fiyat:", price,
+            "kdv oranı: ", tax,
+            "kdvTutari:", priceTax,
+            "fiyat:", total
+        );
+
+        console.log(17 % 2);
+        console.log(2 ** 3);
+
+        console.log(Math.floor(1.7));  // aşağı yuvarlama
+        console.log(Math.ceil(1.7));  // yukarı yuvarlama
+        console.log(Math.round(1.5));  // yuvarlama
+
+        let stringNumber = "12";
+        console.log(typeof stringNumber);
+        console.log(typeof Number(stringNumber));
+
+        let number2 = 7;
+        console.log(parseFloat(number2));
+
+        let number3 = 7.45;
+        console.log(number3);
+        console.log(parseInt(number3));
+
+
+        let number4 = 3.1415171819;
+        console.log(number4);
+        console.log(number4.toFixed(2));
+
+
+        console.log(Math.sqrt(25));
+        console.log(Math.pow(2, 3));
+
+        //random sayı oluşturma
+
+        console.log(Math.round(Math.random() * 10 + 1));
+
+
+    </script>
+
+</body>
+
+</html>
