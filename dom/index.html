@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="title">Merhaba dünya</p>
+
+    <ul>
+        <li><a href="#">Bu bir link </a></li>
+        <li>kedi</li>
+        <li>köpek</li>
+    </ul>
+
+    <script>
+        let renk = document.getElementById("title");
+        renk.style.color ="red";
+        renk.innerHTML="volkan doğru";
+        console.log(renk);
+
+        let link = document.querySelector("ul>li>a");
+        link.innerHTML="BU LİNK ARTIK BENİM LİNKİM";
+
+        // prompt("Merhaba nasılsın","İsminiz");
+        // alert("stop");
+        // open("https://sabis.sakarya.edu.tr/");
+        // close()
+
+        let listItem = document.querySelector("ul>li:last-child");
+        console.log(listItem);
+        listItem.innerHTML="Bu bir liste itemi değişti";
+
+        let ulListe = document.querySelector("ul");
+        
+        let yeniEleman = document.createElement("li");
+        yeniEleman.innerHTML="Yeni eleman";
+        ulListe.prepend(yeniEleman);
+    </script>
+</body>
+
+</html>
