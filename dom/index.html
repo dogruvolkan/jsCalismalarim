@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .btn {
+            width: 150px;
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,14 +28,22 @@
         <li>köpek</li>
     </ul>
 
+    <p class="tikla" onclick="icerikDegistir()">Sakın tıklama</p>
+
+    <button class="btn" onmouseover="mOver()" onmouseout="mOut()">Merhaba</button> <br> <br>
+
+    <button class="uyari">uyarı oluştur</button>
+
+    <input type="text" class="ad" value="adsa">
+
     <script>
         let renk = document.getElementById("title");
-        renk.style.color ="red";
-        renk.innerHTML="volkan doğru";
+        renk.style.color = "red";
+        renk.innerHTML = "volkan doğru";
         console.log(renk);
 
         let link = document.querySelector("ul>li>a");
-        link.innerHTML="BU LİNK ARTIK BENİM LİNKİM";
+        link.innerHTML = "BU LİNK ARTIK BENİM LİNKİM";
 
         // prompt("Merhaba nasılsın","İsminiz");
         // alert("stop");
@@ -33,13 +52,45 @@
 
         let listItem = document.querySelector("ul>li:last-child");
         console.log(listItem);
-        listItem.innerHTML="Bu bir liste itemi değişti";
+        listItem.innerHTML = "Bu bir liste itemi değişti";
 
         let ulListe = document.querySelector("ul");
-        
+
         let yeniEleman = document.createElement("li");
-        yeniEleman.innerHTML="Yeni eleman";
+        yeniEleman.innerHTML = "Yeni eleman";
         ulListe.prepend(yeniEleman);
+
+
+        function icerikDegistir() {
+            let icerik = document.querySelector(".tikla");
+            icerik.innerHTML = "Niye tıkladın ki tıklama dedim sana";
+        }
+
+        function mOver(){
+            let icerik2=document.querySelector(".btn");
+            icerik2.innerHTML = "üstüme gelme";
+        }
+
+        function mOut(){
+            let icerik3 = document.querySelector(".btn");
+            icerik3.innerHTML ="şimdi de gitme";
+        }
+
+        let uyari = document.querySelector(".uyari");
+        uyari.addEventListener("keypress", uyariOlustur);
+
+        function uyariOlustur(){
+            alert("uyarı oluştu");
+        }
+
+        let ad = document.querySelector(".ad");
+        ad.addEventListener("focus", inputIslem);
+
+        function inputIslem(){
+            ad.value="dokunma";
+        }
+
+
     </script>
 </body>
 
