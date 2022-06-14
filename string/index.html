@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // eski yöntem string birleştirme
+        let name = "ali";
+        let surname = "kedi";
+        console.log(name + " " + surname + " " + "hoşgeldin");
+
+
+        //template literals
+        console.log(`${name} ${surname} hoşgeldin`);
+
+        //template literals ile çoklu satırlı yazılabilir
+        let message = `
+        ali , kemal nerdesin
+        seni aradım bulamadım
+        `;
+
+        console.log(message);
+
+
+        //string işlemleri
+
+        let name2 = "volkan doğru";
+        console.log(`kelimenin uzunluğu: ${name2.length}`);
+
+        console.log(`kelimenin içinde o harfinin index numarası :${name2.indexOf("o")}`);
+
+        console.log(`cümlenin içinde o ifadesinin index numarası: ${name2.lastIndexOf("o")}`);
+
+        console.log(`cümle içinde o harfinin indexi ${name2.search("o")}`);
+
+        console.log(`isim ve soyadını parçalama sonucu soyadı ${name2.slice(-6)}`);
+        console.log(`isim ve soyadını parçalama sonucu isim ${name2.substring(0, 6)}`);
+        console.log(`soyadı ${name2.slice(6)}`);
+
+        console.log(`yeni isim ${name2.replace("volkan", "kerem")}`);
+
+        let name3 = "ben bir kedi  miyim bir süt müyüm";
+        console.log(`tüm aranan iafdeleri değiştirme: ${name3.replaceAll("bir","iki")}`);
+
+        let city = "istanbul";
+        console.log(`büyük harfli hali: ${city.toLocaleUpperCase()}`);
+
+        let city2 ="ŞANLIURFA";
+        console.log(`küçük harfli hali: ${city2.toLocaleLowerCase()}`);
+
+        let name4 = "elif";
+        console.log(name4.concat(" ","sazan"));
+
+        console.log(`name ifadesinde 2.index: ${name4.charAt(2)} harfi bulunur`);
+
+        let meyveler = "elma-armut-kiraz-portakal";
+        let meyve = meyveler.split("-");
+        console.log(meyve);
+
+        let isim = "volkan";
+        let ilkHar = (isim[0].toLocaleUpperCase()).concat(isim.slice(1));
+        console.log(ilkHar);
+    </script>
+</body>
+
+</html>
