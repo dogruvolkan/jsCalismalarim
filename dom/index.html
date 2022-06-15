@@ -16,6 +16,14 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .sinfOldi {
+            color: #4CAF50;
+        }
+
+        #idOldi {
+            background-color: tomato;
+        }
     </style>
 </head>
 
@@ -35,6 +43,12 @@
     <button class="uyari">uyarı oluştur</button>
 
     <input type="text" class="ad" value="adsa">
+
+    <small>Merhaba ben küçüğüm</small>
+
+
+    <h1 id="id1">ben bir başlığım</h1>
+    <h2 id="id2"></h2>
 
     <script>
         let renk = document.getElementById("title");
@@ -66,30 +80,38 @@
             icerik.innerHTML = "Niye tıkladın ki tıklama dedim sana";
         }
 
-        function mOver(){
-            let icerik2=document.querySelector(".btn");
+        function mOver() {
+            let icerik2 = document.querySelector(".btn");
             icerik2.innerHTML = "üstüme gelme";
         }
 
-        function mOut(){
+        function mOut() {
             let icerik3 = document.querySelector(".btn");
-            icerik3.innerHTML ="şimdi de gitme";
+            icerik3.innerHTML = "şimdi de gitme";
         }
 
         let uyari = document.querySelector(".uyari");
         uyari.addEventListener("keypress", uyariOlustur);
 
-        function uyariOlustur(){
+        function uyariOlustur() {
             alert("uyarı oluştu");
         }
 
         let ad = document.querySelector(".ad");
         ad.addEventListener("focus", inputIslem);
 
-        function inputIslem(){
-            ad.value="dokunma";
+        function inputIslem() {
+            ad.value = "dokunma";
         }
 
+        let degistir = document.getElementById("id2");
+        let icerik = document.getElementById("id1");
+        // degistir.innerHTML = icerik.firstChild.nodeValue;
+        degistir.innerHTML = icerik.childNodes[0].nodeValue;
+
+        let ekleSmall = document.querySelector("small");
+        ekleSmall.className = "sinfOldi";
+        ekleSmall.id = "idOldi";
 
     </script>
 </body>

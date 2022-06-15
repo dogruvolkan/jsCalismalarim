@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .listItemClass{
+            color:azure;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="list">
+       
+        <li>1.görev</li>
+        <li>2.görev
+            
+        </li>
+        <li>3.görev</li>
+    </ul>
+
+    <script>
+
+        const listItem = document.createElement("li");
+        // listItem.className ="listItemClass";
+        listItem.classList.add("listItemClass");
+        
+        listItem.id= "listItemId";
+
+        listItem.setAttribute("style", "background-color: red;");
+
+        const metin = document.createTextNode("anonim görev");
+        listItem.appendChild(metin);
+ 
+
+        // document.querySelector("#list").appendChild(listItem);
+        document.querySelector("#list").prepend(listItem);
+
+        listItem.removeAttribute("class");
+        // listItem.remove();
+
+        let anaListe = document.querySelector("ul");
+        anaListe.children[2].remove();
+
+
+    </script>
+
+</body>
+
+</html>
