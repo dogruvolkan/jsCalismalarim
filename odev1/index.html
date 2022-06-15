@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .container {
+            color: #C06A05;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col">
+                <h1>KODLUYORUZ</h1>
+                <h5>Merhaba <span class="userName"></span> Hoş Geldiniz</h5>
+                <h5><span class="saat"></span></h5>
+                <p>tarihinde Kodluyoruz Frontend Web Development Patikasının Javascript Bölümü 1. ödevindesiniz</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let getName = prompt("Adınızı Giriniz");
+        let userName = document.querySelector(".userName");
+        userName.innerHTML = getName;
+
+        function saat() {
+            let tarih = new Date();
+
+            let gunler = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+            let saat = tarih.getHours() + ":" + tarih.getMinutes() + ":" + tarih.getSeconds() + "\t" + gunler[tarih.getDay()];
+
+            let setSaat = document.querySelector(".saat");
+            setSaat.innerHTML = saat;
+        }
+
+        let dinamikSaat = setInterval(saat, 100);
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
