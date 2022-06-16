@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #yellow,
+        #purple {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin: 15px;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #purple {
+            background-color: rebeccaPurple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn">BANA TIKLA</button>
+
+    <form action="">
+        <select name="" id="renk">
+            <option value="white">white</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="pink">pink</option>
+            <option value="purple">purple</option>
+        </select>
+    </form>
+
+    <div id="yellow"></div>
+    <div id="purple"></div>
+
+    <div id="text">
+        <div>
+            <input id="input" placeholder="write">
+            <div id="output" style="background-color:orange ;width:60%"> çıktı </div>
+        </div>
+    </div>
+
+    <script>
+
+        let input = document.getElementById('input');
+        let output = document.getElementById('output');
+
+        input.addEventListener('input', function (event) {
+            output.innerText = event.target.value.split('').join('');
+        });
+
+        let yellowball = document.getElementById("yellow");
+        let purpleBall = document.getElementById("purple");
+
+        yellowball.onclick = function () {
+            purpleBall.style.backgroundColor = "yellow";
+        }
+
+        function sayHello(name) {    //parametre
+            console.log(`Merhaba ${name}`);
+        }
+
+        sayHello("Volkan");   //argüman
+
+
+        //anonim fonksiyon
+
+        let sayilariTopla = function (sayi1, sayi2) {
+            console.log(sayi1 + sayi2);
+        }
+
+        sayilariTopla(10, 20);
+
+        function printScreen1() {
+            console.log("İlk ekran çıktısı");
+        }
+
+        function printScreen2() {
+
+            console.log("İkinci ekran çıktısı")
+
+        }
+        setTimeout(printScreen2, 1000);
+
+
+        function printScreen3() {
+            console.log("Üçüncü ekran çıktısı");
+        }
+        printScreen1();
+        printScreen2();
+        printScreen3();
+
+        //arrow function
+
+        let carpim = (num1, num2) => {
+            console.log(num1 * num2);
+        }
+
+        carpim(49, 7);
+
+        let sayHi = () => console.log("hi world");
+
+        //recursive function 
+
+        //faktöriyel hesabı
+        let fak = (num) => {
+            if (num == 1)
+                return 1;
+            return num * fak(num - 1);
+        }
+
+        console.log(fak(5));
+
+
+        //kuvvet alma 
+        let kuvvet = (taban, us) => {
+            if (us == 0)
+                return 1;
+            return taban * kuvvet(taban, us - 1);
+        }
+
+        console.log(kuvvet(7, 3));
+
+
+        //dom with function
+
+
+        let btn = document.querySelector(".btn");
+        btn.addEventListener("click", uyariGoster);
+
+        function uyariGoster() {
+            btn.innerHTML = "USTA BANA TIKLADILAR";
+            btn.style.backgroundColor = "green";
+        }
+
+
+
+        let renkSecim = document.querySelector("#renk");
+
+        renkSecim.addEventListener("change", bodyRenk);
+
+        function bodyRenk() {
+            document.body.style.backgroundColor = renkSecim.value;
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
