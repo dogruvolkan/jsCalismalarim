@@ -25,22 +25,21 @@
         let sayi = 0;
         counter.innerHTML = sayi;
     
-        increase.addEventListener("click", artir);
-        function artir() {           
-            sayi++;
+        increase.addEventListener("click", clickEvent);
+        decrease.addEventListener("click",clickEvent);
+        reset.addEventListener("click", clickEvent);
+
+        function clickEvent(){
+            if(this.id == "increase"){
+                sayi++;
+            }else if(this.id == "decrease"){
+                sayi--;
+            }else{
+                sayi = 0;
+            }
             counter.innerHTML = sayi;
         }
 
-        decrease.addEventListener("click",  function azalt() {           
-            sayi--;
-            counter.innerHTML = sayi;
-        });
-       
-        reset.addEventListener("click", sifirla);
-        function sifirla() { 
-            sayi = 0;
-            counter.innerHTML = sayi;
-        }
     </script>
 </body>
 
