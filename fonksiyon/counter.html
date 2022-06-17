@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3 id="counter">0</h3>
+    <button id="increase">Artır</button>
+    <button id="decrease">Azalt</button>
+    <button id="sifirla">Sıfırla</button>
+
+
+    <script>
+        let counter = document.querySelector('#counter');
+        let increase = document.querySelector('#increase');
+        let decrease = document.querySelector('#decrease');
+        let reset = document.querySelector('#sifirla');
+
+        let sayi = 0;
+        counter.innerHTML = sayi;
+    
+        increase.addEventListener("click", artir);
+        function artir() {           
+            sayi++;
+            counter.innerHTML = sayi;
+        }
+
+        decrease.addEventListener("click",  function azalt() {           
+            sayi--;
+            counter.innerHTML = sayi;
+        });
+       
+        reset.addEventListener("click", sifirla);
+        function sifirla() { 
+            sayi = 0;
+            counter.innerHTML = sayi;
+        }
+    </script>
+</body>
+
+</html>
