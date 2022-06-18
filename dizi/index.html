@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/bffc59eac1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let dizi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(typeof dizi);
+        console.log(dizi[5]);
+        console.log(dizi[Math.round(dizi.length / 2)]);
+
+        //dizinin uzunluğunu bulma
+        console.log(dizi.length);
+
+        //dizinin son elemanına ulaşma
+        console.log(dizi[dizi.length - 1]);
+
+        //dizi içerisinde dizi kullanımı
+        let dizi2 = ["izmir", "aydın", ["çine", "bozdoğan", "kuyucak"]];
+        console.log(dizi2[2][1]);
+
+
+        let cars = ["bmw", "mercedes", "fiat"];
+        //     cars.forEach(function(item,index){
+        //        console.log(item,index);
+        //    });
+
+        cars.forEach((item, index) => {
+            console.log(item, index);
+        })
+
+        let fruits = ["elma", "armut", "muz", "kiraz"];
+        fruits.push("çilek");
+        fruits.unshift("karpuz");
+        for (let fruit of fruits) {
+            console.log(fruit);
+        }
+
+        let dizi4 = [1, 2, 3, 4, 5];
+        dizi4.splice(2, 2, "volkan");
+        console.log(dizi4);
+
+        dizi4.pop();
+        console.log(dizi4);
+
+        dizi4.push();
+        console.log(dizi4);
+
+        const birVarMı = dizi4.includes(3);
+        console.log(birVarMı);
+
+        let dizi5 = ["ben", "sen", "o", "biz", "siz", "onlar"];
+        console.log(dizi5.slice(1, 5));
+
+        let dizi6 = dizi4.concat(dizi5);
+        console.log(dizi6);
+
+
+        let dizi7 = [8, 3, 9, 16, 5, 11, 20];
+        console.log(dizi7.sort());
+        console.log(dizi7.sort(
+            function (a, b) {
+                return b - a;
+            }
+        ));
+
+
+        let dizi8 = [1, 2, 3];
+        // let sonuc = dizi8.map(function(sayi){
+        //     return sayi*2;
+        // })
+
+        let sonuc = dizi8.map((sayi) => {
+            return sayi * 2;
+        })
+
+        console.log(sonuc);
+
+
+        let dizi9 = [1, 2, 3, 7];
+        const sonuc5 = dizi9.some(function (sayi5) {
+            return sayi5 > 2;
+        })
+        console.log(sonuc5);
+
+        const sonuc6 = dizi9.every(function (sayi6) {
+            return sayi6 > 2;
+        })
+        console.log(sonuc6);
+
+        const sonuc7 = dizi9.filter(function (sayi7) {
+            return sayi7 >= 2;
+        })
+
+        console.log(sonuc7);
+
+        var nums= [2,3,6,6,5];
+        function getSecondLargest(nums) {
+            // Complete the function
+            const sirala = nums.sort(function (a, b) { return b - a; });
+            console.log(sirala);
+
+            const enBuyuk = sirala[0];
+            console.log(enBuyuk);
+            const ikinciEnBuyuk = sirala.find(function (sayi) {
+                return sayi < enBuyuk;
+            })
+            console.log(ikinciEnBuyuk);
+        }
+
+        
+
+    </script>
+
+</body>
+
+</html>
