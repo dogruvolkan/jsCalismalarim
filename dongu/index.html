@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="list">
+
+    </ul>
+
+
+    <script>
+        
+        let meyveler = ["elma","çilek","karpuz"];
+        let listDom = document.querySelector("#list");
+
+        for(let i =0; i<meyveler.length ; i++){
+            let liDom=document.createElement("li");
+            liDom.innerHTML = meyveler[i];
+            listDom.appendChild(liDom);
+        }
+
+        let kelime="javascriptloop";
+
+        function sesliVeSesizHarfler(kelime){
+            
+            let sesizler="";
+            let sesliler ="aeiou";
+
+            for(let harf of kelime){
+                sesliler.includes(harf) ? console.log(harf) : sesizler+=harf + '\n';
+            }
+
+            console.log(sesizler.trim());
+        }
+
+        sesliVeSesizHarfler(kelime)
+
+    </script>
+
+</body>
+
+</html>
