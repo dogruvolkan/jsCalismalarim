@@ -6,15 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="form.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-    <form id="userForm" method="GET" >
-        <input type="number" name="score" id="score" >
-        <input type="submit">
-    </form>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-2">
+                    <label for="sayi1">Sayi1</label>
+                    <input type="number" class="form-control" id="sayi1">
+                </div>
+                <div class="col-1 mt-2 ps-4 fs-1">+</div>
+                <div class="col-2 ">
+                    <label for="sayi2">Sayi1</label>
+                    <input type="number" class="form-control" id="sayi2">
+                </div>
+                <div class="col-1 mt-2 ps-5 fs-1">=</div>
+                <div class="col-1">
+                    <label for="sonuc">Sonuc</label>
+                    <input type="number" class="form-control" id="sonuc" disabled>
+                </div>
+                <div class="col-1">
+                    <button id="btn"  class="btn btn-success mt-4" >HESAPLA</button>
+                </div>
+                
+        </form>
+    </div>
+    </div>
+
+
+    <script src="form.js"></script>
 
 </body>
 
