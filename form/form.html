@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="alert"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2 mt-5">
+                <form id="userForm">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="score" class="form-label">Puan</label>
+                        <input type="number" class="form-control" id="score" name="score">
+                    </div>
+                    <button type="reset" class="btn btn-danger">Sıfırla</button>
+                    <button type="submit" class="btn btn-success">Gönder</button>
+                </form>
+            </div>
+            <div class="col-sm-8 offset-sm-2 mt-4">
+                <ul class="list-group" id="userList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let userformDOM = document.querySelector("#userForm")
+        const alertDOM = document.querySelector("#alert")
+
+        function alert() {
+            alertDOM.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
+                <strong>Başlık bilgisi! </strong> Hatalı giriş.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`
+        }
+
+        userformDOM.addEventListener("submit", formHandler)
+        function formHandler(event) {
+            event.preventDefault()
+            const USER_NAME = document.querySelector("#username")
+            const SCORE = document.querySelector("#score")
+            if (USER_NAME.value && SCORE.value) {
+                addItem(USER_NAME.value, SCORE.value)
+                USER_NAME.value = ""
+                SCORE.value = ""
+            }
+            else {
+                alert()
+            }
+        }
+
+        userListDOM = document.querySelector("#userList")
+
+        function addItem(userName, score) {
+            let liDOM = document.createElement("li");
+            liDOM.innerHTML = `${userName} <span class="badge bg-primary rounded-pill">${score}</span>`;
+            liDOM.classList.add(`list-group-item`, `d-flex`, `justify-content-between`, `align-items-center`);
+            userListDOM.append(liDOM);
+        }
+    </script>
+
+</body>
+
+</html>
