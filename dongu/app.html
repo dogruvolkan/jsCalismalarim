@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="list_item">
+
+    </ul>
+
+    <script>
+
+        let products = ["telefon","tablet","laptop","kulaklık","monitor","hoparlör"];
+
+        products.forEach(item =>{
+            let listDom = document.querySelector("#list_item");
+            let liDom = document.createElement("li");
+            liDom.innerHTML=item.toLocaleUpperCase();
+            listDom.appendChild(liDom);
+        })
+
+
+        let sonuc =products.filter(item =>{
+            return item.length>7;
+        })
+
+        console.log(sonuc);
+
+
+        const USERS = ["AYSE", "MehMet" , "TugCE" , "AkSEL"];
+        
+
+        let userName  = USERS.map(item =>{
+            return item.toLocaleUpperCase();
+        })
+        console.log(userName);
+
+
+        let shortName = USERS.map(item=>{
+            return item[0].toLocaleUpperCase();
+        })
+        console.log(shortName);
+
+
+        let newName = USERS.map(item =>{
+            let ilkHarf = item[0].toLocaleUpperCase();
+            return ilkHarf+=item.slice(1).toLowerCase();
+        })
+ 
+        console.log(newName);
+
+
+    </script>
+    
+</body>
+</html>
