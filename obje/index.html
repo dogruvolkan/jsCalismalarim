@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let users ={
+
+            name:"volkan",
+            age:22,
+            city:"aydın",
+            gender :"man"
+        }
+
+        console.log(users.gender);
+
+        
+        let animals = Object.create(users);
+        animals.name="kedi";
+        console.log(animals.name);
+
+
+        let plants = new Object();
+        plants.name="rose";
+        console.log(plants.name);
+
+        console.log(plants["name"]);
+        console.log(Object.keys(users));
+        console.log(Object.values(users));
+        console.log(Object.entries(users));
+
+        for(let deger in users){
+            console.log(deger , users[deger]);
+        }
+
+    </script>
+
+</body>
+
+</html>
