@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color:#4C3575 ;
+   
+}
+
+.form-control:focus {
+    color: none !important;
+    background-color: #fff;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.main{
+    background-color: #ECE5C7;
+}
+
+.list_item{
+    list-style-type: none;
+    padding-bottom: 10px;
+    position: relative;
+    left:-30px;
+}
+
