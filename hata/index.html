@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <input id="dogumTarihi" type="text">
+        <button onclick="valid()">GÖNDER</button>
+    </form>
+
+
+    <script>
+
+        function valid(){
+
+            try{
+                if(document.querySelector("#dogumTarihi").value==""){
+                    throw "Lütfen doğum tarihi giriniz.";
+                }
+                else{
+                    alert("Doğum tarihi doğru girdiniz.");
+                }
+            }
+            catch(e){
+                console.log(e);
+            }
+        }
+
+        // try{
+        //     hello();
+        // }
+        // catch(e){
+        //     console.log(e);
+        //     console.log(e.message);
+        //     console.log(e.name);
+        //     console.log(e.stack);
+        // }
+    </script>
+</body>
+
+</html>
