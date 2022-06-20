@@ -69,6 +69,61 @@
         };
         console.log(birey.merhabaDe(birey.yasHesapla()));
 
+        //rest
+        let topla = (...dizi) =>{
+            let toplam = 0;
+            dizi.forEach(item =>{
+                toplam += item;
+            });
+                     
+            return toplam;
+        }
+        console.log(topla(1,2,3,4,5));
+
+        let [,pronoun,,name]=["Merhaba","benim","adım","Mehmet"];
+        console.log(pronoun);
+        console.log(name);
+
+
+        let animalName ="cat";
+        let arayAnimal = [...animalName];
+        console.log(arayAnimal);
+
+        let group1 = [1,2,3];
+        let group2  =[4,5,6];
+
+        let groups = [...group1,...group2];
+        console.log(groups);
+
+        function carpma(a,b,c,d){
+            return a*b*c*d;
+        }
+        let sayilar =[1,2,3,4];
+        console.log(carpma(...sayilar));
+
+
+        const user ={
+            ad:"volkan",
+            yas:22,
+            sehir:"aydın"
+        }
+
+       const {ad,yas,sehir:il} = user;
+
+        console.log(user.ad);
+        console.log(ad);
+        console.log(il);
+
+
+        const products={
+            pId :1,
+            pName:"ev",
+            pPrice:1000
+        }
+
+        const {pId , ...personalInfo}=products;
+        console.log(personalInfo);
+
     </script>
 
 </body>
