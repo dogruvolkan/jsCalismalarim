@@ -13,24 +13,24 @@
 
     <script>
 
-        let users ={
+        let users = {
 
-            name:"volkan",
-            age:22,
-            city:"aydın",
-            gender :"man"
+            name: "volkan",
+            age: 22,
+            city: "aydın",
+            gender: "man"
         }
 
         console.log(users.gender);
 
-        
+
         let animals = Object.create(users);
-        animals.name="kedi";
+        animals.name = "kedi";
         console.log(animals.name);
 
 
         let plants = new Object();
-        plants.name="rose";
+        plants.name = "rose";
         console.log(plants.name);
 
         console.log(plants["name"]);
@@ -38,9 +38,36 @@
         console.log(Object.values(users));
         console.log(Object.entries(users));
 
-        for(let deger in users){
-            console.log(deger , users[deger]);
+        for (let deger in users) {
+            console.log(deger, users[deger]);
         }
+
+        let kitap = {
+            kitapIsmi: "zort",
+            kitapYazari: "zortyazar",
+            birthYear: 2000,
+            yazarYas: function(){
+                let tarih = new Date();
+                console.log(tarih.getFullYear() - this.birthYear);
+            },
+            kitapTanit: () => `${kitap.kitapIsmi} ${kitap.kitapYazari}`
+
+        }
+        console.log(kitap.kitapTanit());
+        kitap.yazarYas();
+
+
+
+        var birey = {
+            isim: 'Ali',
+            soyisim: 'Veli',
+            dogumYili: 1989,
+            merhabaDe: (age) => `Merhaba, ben ${birey.isim} ${birey.soyisim} ${age} yaşındayım`, 
+        };
+        birey.yasHesapla = function () {
+            return 2021 - this.dogumYili;
+        };
+        console.log(birey.merhabaDe(birey.yasHesapla()));
 
     </script>
 
