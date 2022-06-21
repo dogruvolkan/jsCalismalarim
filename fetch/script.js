@@ -1,4 +1,4 @@
-apiyi kullanmak için istekte bulunduk
+//apiyi kullanmak için istekte bulunduk
 
 
 let listDom = document.querySelector("#listItem");
